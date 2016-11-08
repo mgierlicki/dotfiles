@@ -34,7 +34,19 @@ let maplocalleader="\\"
 """"" Utilities ========================
 Plugin 'scrooloose/nerdtree' "Nerd tree
 Plugin 'tpope/vim-fugitive'              " git support from dat tpope
-
+Plugin 'scrooloose/syntastic'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall'
+let g:syntastic_cpp_config_file = '.config'
+"let b:syntastic_cpp_cflags = '-I/opt/boost_1_62_0'
+" better solution is to set flags in .config file in project directory e.g.
+"-Ilibs/dir1
+"-Ilibs/dir2
+"-Ilibs/dir2/dir3
+"the flags are 1 per line
 """"" UI Plugins =======================
 Plugin 'octol/vim-cpp-enhanced-highlight'
   let g:cpp_class_scope_highlight = 1
